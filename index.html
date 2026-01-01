@@ -218,5 +218,42 @@ function submitForm(e){
 </script>
 <!-- ================= END ADD ONLY ================= -->
 
+<!-- ================= ADD ONLY : MOBILE WHATSAPP FIX ================= -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const form = document.querySelector('form[onsubmit="submitForm(event)"]');
+  if (!form) return;
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = form.querySelector('input[name="name"]').value.trim();
+    const phone = form.querySelector('input[name="phone"]').value.trim();
+
+    if (!name || !phone) return;
+
+    const academyNumber = "966506450053";
+
+    const message =
+`أنا ${name}
+رقم جوالي: ${phone}
+
+حاب أسجل في أكاديمية الفتى الذهبي
+وأتمنى التواصل معي لمزيد من التفاصيل`;
+
+    const whatsappURL =
+      "https://wa.me/" +
+      academyNumber +
+      "?text=" +
+      encodeURIComponent(message);
+
+    window.location.href = whatsappURL;
+  });
+
+});
+</script>
+<!-- ================= END ADD ONLY ================= -->
+
 </body>
 </html>
