@@ -69,14 +69,12 @@ footer{ background:#000; padding:30px; text-align:center; font-size:.9rem; opaci
 
 /* ================= ADD ONLY : MOBILE IMAGE FIX ================= */
 @media (max-width: 768px){
-
   .section{
     background-attachment: scroll !important;
     background-position: center center !important;
     background-size: cover !important;
     min-height: 100vh;
   }
-
 }
 /* ================= END ADD ONLY ================= */
 
@@ -84,14 +82,12 @@ footer{ background:#000; padding:30px; text-align:center; font-size:.9rem; opaci
 .about .content{
   max-width: 850px;
 }
-
 .about-text{
   font-size: 1.2rem;
   line-height: 2;
   margin-bottom: 1.4rem;
   color: #eaeaea;
 }
-
 .about-text strong{
   color: var(--gold);
   font-weight: 700;
@@ -131,33 +127,31 @@ footer{ background:#000; padding:30px; text-align:center; font-size:.9rem; opaci
 
 <!-- ABOUT -->
 <section id="about" class="section about">
-  <div class="content" data-aos="fade-right">
+<div class="content" data-aos="fade-right">
+<h1 class="text-warning mb-4">من نحن</h1>
 
-    <h1 class="text-warning mb-4">من نحن</h1>
+<p class="about-text">
+أكاديمية الفتى الذهبي <strong>(Golden Boy)</strong> أكاديمية رياضية متخصصة في اكتشاف وتطوير المواهب الكروية،
+نعمل وفق أحدث المناهج التدريبية العالمية المعتمدة في كبرى الأكاديميات الدولية.
+</p>
 
-    <p class="about-text">
-      أكاديمية الفتى الذهبي <strong>(Golden Boy)</strong> أكاديمية رياضية متخصصة في اكتشاف وتطوير المواهب الكروية،
-      نعمل وفق أحدث المناهج التدريبية العالمية المعتمدة في كبرى الأكاديميات الدولية.
-    </p>
+<p class="about-text">
+نهدف إلى بناء لاعب متكامل من جميع الجوانب
+<strong>البدنية، الفنية، التكتيكية، والذهنية</strong>،
+من خلال برامج تدريبية مدروسة يشرف عليها طاقم تدريبي محترف يمتلك خبرات محلية ودولية.
+</p>
 
-    <p class="about-text">
-      نهدف إلى بناء لاعب متكامل من جميع الجوانب
-      <strong>البدنية، الفنية، التكتيكية، والذهنية</strong>،
-      من خلال برامج تدريبية مدروسة يشرف عليها طاقم تدريبي محترف يمتلك خبرات محلية ودولية.
-    </p>
+<p class="about-text">
+في أكاديمية الفتى الذهبي، نؤمن بأن الموهبة وحدها لا تكفي، لذلك نركز على
+<strong>الانضباط، الاحترافية، ونمط الحياة الصحي</strong>،
+مع متابعة دقيقة لتطور كل لاعب لضمان تحقيق أقصى إمكاناته.
+</p>
 
-    <p class="about-text">
-      في أكاديمية الفتى الذهبي، نؤمن بأن الموهبة وحدها لا تكفي، لذلك نركز على
-      <strong>الانضباط، الاحترافية، ونمط الحياة الصحي</strong>،
-      مع متابعة دقيقة لتطور كل لاعب لضمان تحقيق أقصى إمكاناته.
-    </p>
-
-    <p class="about-text">
-      رسالتنا هي صناعة جيل كروي واعد قادر على المنافسة محليًا ودوليًا،
-      ووضع اللاعب على الطريق الصحيح نحو الاحتراف بثقة وثبات.
-    </p>
-
-  </div>
+<p class="about-text">
+رسالتنا هي صناعة جيل كروي واعد قادر على المنافسة محليًا ودوليًا،
+ووضع اللاعب على الطريق الصحيح نحو الاحتراف بثقة وثبات.
+</p>
+</div>
 </section>
 
 <!-- SERVICES -->
@@ -183,7 +177,6 @@ footer{ background:#000; padding:30px; text-align:center; font-size:.9rem; opaci
 <div class="col-md-5"><input name="phone" class="form-control" placeholder="رقم الجوال" required></div>
 <div class="col-md-10 text-center"><button class="btn-gold">إرسال</button></div>
 </form>
-
 </div>
 </section>
 
@@ -196,6 +189,34 @@ footer{ background:#000; padding:30px; text-align:center; font-size:.9rem; opaci
 AOS.init({duration:1000,once:true,easing:"ease-in-out"});
 window.addEventListener("scroll",()=>{document.querySelector(".navbar").classList.toggle("scrolled",window.scrollY>50);});
 </script>
+
+<!-- ================= ADD ONLY : WHATSAPP SEND SCRIPT ================= -->
+<script>
+function submitForm(e){
+  e.preventDefault();
+
+  const name = e.target.name.value.trim();
+  const phone = e.target.phone.value.trim();
+
+  const academyNumber = "966506450053";
+
+  const message =
+`أنا ${name}
+رقم جوالي: ${phone}
+
+حاب أسجل في أكاديمية الفتى الذهبي 
+وأتمنى التواصل معي لمزيد من التفاصيل`;
+
+  const url =
+    "https://wa.me/" +
+    academyNumber +
+    "?text=" +
+    encodeURIComponent(message);
+
+  window.open(url, "_blank");
+}
+</script>
+<!-- ================= END ADD ONLY ================= -->
 
 </body>
 </html>
