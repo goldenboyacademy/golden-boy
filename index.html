@@ -255,5 +255,24 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 <!-- ================= END ADD ONLY ================= -->
 
+<!-- ================= ADD ONLY : PRIVACY URL CLEAN ================= -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const form = document.querySelector('form[onsubmit="submitForm(event)"]');
+  if (!form) return;
+
+  form.addEventListener("submit", function () {
+
+    if (window.history && window.history.replaceState) {
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
+
+  });
+
+});
+</script>
+<!-- ================= END ADD ONLY ================= -->
+
 </body>
 </html>
