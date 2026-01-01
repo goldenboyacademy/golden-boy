@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>أكاديمية الفتى الذهبي | Golden Boy</title>
+<meta name="description" content="أكاديمية الفتى الذهبي Golden Boy – نصنع أبطال المستقبل وفق معايير احترافية عالمية">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<!-- ✅ EmailJS (إضافة فقط) -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<style>
+:root{ --gold:#FFD84D; --dark:#0b0b0b; --overlay:rgba(0,0,0,.65); }
+html{scroll-behavior:smooth}
+body{ margin:0; font-family:"Cairo",sans-serif; background:var(--dark); color:#fff; }
+
+/* NAVBAR */
+.navbar{ background:rgba(0,0,0,.35); backdrop-filter:blur(12px); transition:.4s; }
+.navbar.scrolled{background:#000}
+.navbar-brand{ color:var(--gold)!important; font-weight:800; }
+.nav-link{ color:#fff!important; font-weight:600; }
+.nav-link:hover{color:var(--gold)!important}
+
+/* SECTIONS */
+.section{ min-height:100vh; position:relative; display:flex; align-items:center; justify-content:center; text-align:center; background-size:cover; background-position:center; background-attachment:fixed; }
+.section::before{ content:""; position:absolute; inset:0; background:var(--overlay); }
+.content{ position:relative; z-index:2; max-width:1100px; padding:30px; }
+
+/* HERO */
+.hero h1{ font-size:clamp(3rem,6vw,4.5rem); font-weight:800; color:var(--gold); }
+.hero p{ font-size:1.4rem; margin:20px 0; }
+.hero span{ letter-spacing:3px; opacity:.8; }
+
+/* BUTTON */
+.btn-gold{ background:var(--gold); color:#000; padding:14px 40px; border-radius:50px; font-weight:700; text-decoration:none; transition:.3s; }
+.btn-gold:hover{ background:#ffcc00; transform:translateY(-4px); }
+
+/* SERVICES */
+.card{ background:rgba(255,255,255,.08); border:none; backdrop-filter:blur(12px); color:#fff; transition:.3s; }
+.card:hover{ transform:translateY(-10px) scale(1.02); background:rgba(255,255,255,.18); }
+.card h5{color:var(--gold)}
+
+/* STATS */
+.stats h2{ color:var(--gold); font-weight:800; font-size:3.2rem; }
+
+/* FORM */
+.form-control{ background:rgba(255,255,255,.1); border:none; color:#fff; }
+.form-control::placeholder{color:#ccc}
+
+/* FOOTER */
+footer{ background:#000; padding:30px; text-align:center; font-size:.9rem; opacity:.8; }
+
+/* BACKGROUNDS */
+.hero{background-image:url(hero.jpg)}
+.about{background-image:url(about.jpg)}
+.vision{background-image:url(vision.jpg)}
+.services{background-image:url(services.jpg)}
+.contact{background-image:url(contact.jpg)}
+
+/* ================= ADD ONLY (ABOUT TEXT ENHANCEMENT) ================= */
+.about .content{
+  max-width: 850px;
+}
+
+.about-text{
+  font-size: 1.2rem;
+  line-height: 2;
+  margin-bottom: 1.4rem;
+  color: #eaeaea;
+}
+
+.about-text strong{
+  color: var(--gold);
+  font-weight: 700;
+}
+/* ================= END ADD ================= */
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="navbar navbar-expand-lg fixed-top">
+<div class="container">
+<a class="navbar-brand" href="#">الفتى الذهبي | Golden Boy</a>
+<button class="navbar-toggler bg-warning" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="menu">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#about">من نحن</a></li>
+<li class="nav-item"><a class="nav-link" href="#services">الخدمات</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact">تواصل</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="section hero">
+<div class="content">
+<h1 data-aos="fade-down">أكاديمية الفتى الذهبي</h1>
+<p data-aos="fade-up" data-aos-delay="200">نصنع أبطال المستقبل وفق معايير احترافية عالمية</p>
+<span data-aos="fade-up" data-aos-delay="400">Golden Boy – The Road To Stardom</span><br><br>
+<a data-aos="zoom-in" data-aos-delay="600" href="#contact" class="btn-gold">سجّل الآن</a>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section about">
+  <div class="content" data-aos="fade-right">
+
+    <h1 class="text-warning mb-4">من نحن</h1>
+
+    <p class="about-text">
+      أكاديمية الفتى الذهبي <strong>(Golden Boy)</strong> أكاديمية رياضية متخصصة في اكتشاف وتطوير المواهب الكروية،
+      نعمل وفق أحدث المناهج التدريبية العالمية المعتمدة في كبرى الأكاديميات الدولية.
+    </p>
+
+    <p class="about-text">
+      نهدف إلى بناء لاعب متكامل من جميع الجوانب
+      <strong>البدنية، الفنية، التكتيكية، والذهنية</strong>،
+      من خلال برامج تدريبية مدروسة يشرف عليها طاقم تدريبي محترف يمتلك خبرات محلية ودولية.
+    </p>
+
+    <p class="about-text">
+      في أكاديمية الفتى الذهبي، نؤمن بأن الموهبة وحدها لا تكفي، لذلك نركز على
+      <strong>الانضباط، الاحترافية، ونمط الحياة الصحي</strong>،
+      مع متابعة دقيقة لتطور كل لاعب لضمان تحقيق أقصى إمكاناته.
+    </p>
+
+    <p class="about-text">
+      رسالتنا هي صناعة جيل كروي واعد قادر على المنافسة محليًا ودوليًا،
+      ووضع اللاعب على الطريق الصحيح نحو الاحتراف بثقة وثبات.
+    </p>
+
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section services">
+<div class="content">
+<h1 class="text-warning mb-5" data-aos="fade-up">خدماتنا</h1>
+<div class="row g-4">
+<div class="col-md-4" data-aos="fade-up"><div class="card p-4"><h5>تدريب احترافي</h5><p>برامج معتمدة لكل الفئات العمرية</p></div></div>
+<div class="col-md-4" data-aos="fade-up" data-aos-delay="200"><div class="card p-4"><h5>مدربون محترفون</h5><p>خبرات محلية ودولية</p></div></div>
+<div class="col-md-4" data-aos="fade-up" data-aos-delay="400"><div class="card p-4"><h5>تطوير بدني</h5><p>لياقة، قوة، سرعة، مرونة</p></div></div>
+<div class="col-md-4" data-aos="fade-up" data-aos-delay="800"><div class="card p-4"><h5 class="text-warning">مسؤول تغذيه</h5><p>متابعة نمط حياة اللاعب وتغذيته من قبل فريق مختص</p></div></div>
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section contact">
+<div class="content" data-aos="fade-up">
+<h1 class="text-warning mb-4">سجل طفلك الان!</h1>
+
+<form class="row g-3 justify-content-center" onsubmit="submitForm(event)">
+<div class="col-md-5"><input name="name" class="form-control" placeholder="الاسم الكامل" required></div>
+<div class="col-md-5"><input name="phone" class="form-control" placeholder="رقم الجوال" required></div>
+<div class="col-md-10 text-center"><button class="btn-gold">إرسال</button></div>
+</form>
+
+</div>
+</section>
+
+<footer>© 2025 أكاديمية الفتى الذهبي | Golden Boy – جميع الحقوق محفوظة</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({duration:1000,once:true,easing:"ease-in-out"});
+window.addEventListener("scroll",()=>{document.querySelector(".navbar").classList.toggle("scrolled",window.scrollY>50);});
+</script>
+
+</body>
+</html>
